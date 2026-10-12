@@ -39,7 +39,6 @@ jobs:
 
    #   - name: compileall
    #     run: python3 -m compileall . 
-
   #    - name: Run tests
   #      run: python3 -m pytest --junitxml=report.xml
   build:
@@ -60,6 +59,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           path: ./dist/app-${{ env.VERSION }}.tar.gz
-          name: test-results
+          name: app-${{ env.VERSION }}.tar.gz
           retention-days: 3
 
