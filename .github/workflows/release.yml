@@ -54,7 +54,7 @@ jobs:
         run: |
           chmod +x build.sh
           ./build.sh
-          ${VERSION}=$(cat VERSION) >> $GITHUB_ENV
+          echo "VERSION=$(cat VERSION)" >> $GITHUB_ENV
 
       - name: upload artifact
         uses: actions/upload-artifact@v7
